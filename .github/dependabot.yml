@@ -1,0 +1,17 @@
+version: 2
+updates:
+- package-ecosystem: cargo
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "20:00"
+    timezone: Asia/Seoul
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: libc
+    versions:
+    - 0.2.92
+    - 0.2.93
+  - dependency-name: webpki-roots
+    versions:
+    - 0.21.1
